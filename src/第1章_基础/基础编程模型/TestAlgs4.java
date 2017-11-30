@@ -20,7 +20,7 @@ public class TestAlgs4 {
 
         // write some text
         StdDraw.setPenColor(StdDraw.WHITE);
-        StdDraw.text(0, +0.95, "Hello, world! This is a test Java program.");
+        StdDraw.text(0, +0.95, "Hello, world! This is a Interval1D1 Java program.");
         StdDraw.text(0, -0.95, "Close this window to finish the installation.");
 
         // draw the bullseye
