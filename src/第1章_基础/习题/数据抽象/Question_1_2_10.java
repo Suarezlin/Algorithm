@@ -15,6 +15,7 @@ public class Question_1_2_10 {
     }
 
     private void draw() {
+        StdDraw.clear();
         StdDraw.setXscale(0, 10);
         StdDraw.setYscale(0, 10);
         StdDraw.setPenRadius(0.01);
@@ -62,6 +63,7 @@ public class Question_1_2_10 {
                 StdDraw.filledRectangle(x, y, 0.5, 0.5);
             }
         }
+        StdDraw.show(500);
     }
 
     public void increase() {
@@ -82,5 +84,6 @@ public class Question_1_2_10 {
         Question_1_2_10 q = new Question_1_2_10(100, 25);
         q.increase();
         q.increase();
+        q.decrease();
     }
 }
