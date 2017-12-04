@@ -2,7 +2,7 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class Question_1_2_17 {
     public static void main(String[] args) {
-        newRational a = new newRational(21474836479.0, 400);
+        newRational a = new newRational(2147483647, 400);
         newRational b = new newRational(300, 600);
         StdOut.println(a.toString());
         StdOut.println(b.toString());
