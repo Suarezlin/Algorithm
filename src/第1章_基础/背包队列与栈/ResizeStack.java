@@ -47,6 +47,10 @@ public class ResizeStack<Item> {
         return N;
     }
 
+    public int length() {
+        return a.length;
+    }
+
     public static void main(String[] args) {
         try {
             FileInputStream input = new FileInputStream("/Users/hayashikoushi/IdeaProjects/algs4-data/tobe.txt");
@@ -60,7 +64,7 @@ public class ResizeStack<Item> {
             String item = StdIn.readString();
             if (!item.equals("-")) s.push(item);
             else if (!s.isEmpty()) StdOut.print(s.pop() + " ");
-            StdOut.println(s.size());
+            StdOut.println(s.length());
         }
         StdOut.println("(" + s.size() + " left on stack");
     }
