@@ -1,36 +1,8 @@
 import edu.princeton.cs.algs4.StdOut;
-import edu.princeton.cs.algs4.StdOut;
+
 import java.util.Iterator;
 
-public class Question_1_3_4 {
-    public static void main(String[] args) {
-        String test1 = "[()]{}{[()()]()}";
-        String test2 = "[(]";
-        StdOut.println(isMatch(test1));
-        StdOut.println(isMatch(test2));
-    }
-
-    public static boolean isMatch(String s) {
-        Stack_1_3_4 stack = new Stack_1_3_4();
-        for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
-            if (c == '{' || c == '[' || c == '(') stack.push(c);
-            else if (c == '}') {
-                if ('{' != (char) stack.pop()) return false;
-            }
-            else if (c == ']') {
-                if ('[' != (char) stack.pop()) return false;
-            }
-            else if (c == ')') {
-                if ('(' != (char) stack.pop()) return false;
-            }
-        }
-        if (stack.isEmpty()) return true;
-        else return false;
-    }
-}
-
-class Stack_1_3_4<Item> implements Iterable<Item> {
+public class Question_1_3_7<Item> implements Iterable<Item> {
     private Node first;
     private int N;
 
@@ -56,7 +28,7 @@ class Stack_1_3_4<Item> implements Iterable<Item> {
         }
     }
 
-    public Stack_1_3_4() {
+    public Question_1_3_7() {
         first = null;
         N = 0;
     }
@@ -87,5 +59,12 @@ class Stack_1_3_4<Item> implements Iterable<Item> {
     public Iterator<Item> iterator() {
         return new ReverseArrayIterator();
     }
-}
 
+    public Item peek() {
+        return first.item;
+    }
+
+    public static void main(String[] args) {
+
+    }
+}
